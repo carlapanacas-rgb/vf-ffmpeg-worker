@@ -1,0 +1,10 @@
+{
+  "name": "vf-ffmpeg-worker",
+  "version": "1.0.0",
+  "private": true,
+  "description": "BOFU Video Factory self-hosted FFmpeg worker: scenes, probe, archive, 9:16 render",
+  "main": "server.js",
+  "scripts": { "start": "node server.js" },
+  "engines": { "node": ">=20" },
+  "dependencies": { "busboy": "1.6.0" }
+}

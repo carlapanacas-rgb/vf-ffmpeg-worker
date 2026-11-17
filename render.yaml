@@ -1,0 +1,14 @@
+# Optional Render Blueprint (New > Blueprint). The guide uses the simpler "New > Web Service" path; both give the same service.
+services:
+  - type: web
+    name: vf-ffmpeg-worker
+    runtime: docker
+    plan: free
+    dockerfilePath: ./Dockerfile
+    healthCheckPath: /health
+    autoDeploy: true
+    envVars:
+      - key: WORKER_TOKEN        # 48 letters/digits; Render asks for the value when the Blueprint is created
+        sync: false
+      - key: PUBLIC_BASE_URL     # https://<service-name>.onrender.com (no trailing slash); Render asks for it too
+        sync: false
